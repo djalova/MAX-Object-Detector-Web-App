@@ -32,7 +32,6 @@ var endpointsMap = {};
 var app = express();
 
 app.use(express.static('static'));
-console.log(args);
 
 // Get all the model IDs for the endpoints configured
 app.get('/models', function(req, res) {
@@ -44,6 +43,7 @@ app.get('/models', function(req, res) {
   }
 
   var promises = endpoints.map((endpoint) => {
+    endpoint = endpoint.endsWith('/') ? endpoints.slice(0, -1) : endpoint;
     return requestPromise(`${endpoint}/model/metadata`)
       .then((response) => {
         endpointsMap[JSON.parse(response.body)['id']] = endpoint;
