@@ -56,8 +56,9 @@ video {
   font-size: 18px;
 }
 
-.panel .dropdown {
-  margin-top: 20px;
+.dropdown {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .ibm-code .btn-primary {

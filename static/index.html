@@ -60,6 +60,15 @@ limitations under the License.
                 <div class="form-group">
                   <input id="file-input" type="file" name="file" accept=".png, .jpg, .jpeg, .gif" />
                 </div>
+                <div class="dropdown">
+                  <span>Model: </span>
+                  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    <span id="selected-endpoint"></span>
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu" id="endpoint-menu" aria-labelledby="dropdownMenu1">
+                  </ul>
+                </div>
                 <button id="file-submit" type="submit" class="btn btn-primary">Submit</button>
                 <button id="webcam-btn" type="button" class="btn btn-primary" style="float:right;">Use your
                   webcam</button>
@@ -70,34 +79,8 @@ limitations under the License.
         </div>
       </div>
 
-      <div class="col-md-2">
 
-        <div id="endpoint-select" class="panel panel-default">
-
-          <div class="panel-heading">
-            <div class="panel-title">
-              Model Selection
-              <span class="info-icon"
-                title="Use the dropdown-menu to choose between different models (if enabled).">&#9432;</span>
-            </div>
-          </div>
-
-          <div class="panel-body">
-            <div class="dropdown">
-              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                <span id="selected-endpoint"></span>
-                <span class="caret"></span>
-              </button>
-              <ul class="dropdown-menu" id="endpoint-menu" aria-labelledby="dropdownMenu1">
-              </ul>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-      <div class="col-md-2">
+      <div class="col-md-3">
 
         <div id="canvas-tools" class="panel panel-default">
 
@@ -121,7 +104,7 @@ limitations under the License.
 
       </div>
 
-      <div class="col-md-2">
+      <div class="col-md-3">
 
         <div id="label-filter" class="panel panel-default">
 

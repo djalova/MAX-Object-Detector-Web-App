@@ -213,7 +213,6 @@ function webcamImageInput() {
     var data = new FormData();
     data.append('image', blob);
     data.append('threshold', 0);
-    data.append('model', 'test_model');
     sendImage(data);
   });
 
@@ -262,7 +261,7 @@ function sendImage(data) {
 function handleModelSelect() {
   selectedModel = $(this).text();
   // Shorten name if too long
-  $('#selected-endpoint').text(selectedModel.length < 15 ? selectedModel : selectedModel.substring(0, 15) + '...');
+  $('#selected-endpoint').text(selectedModel.length < 20 ? selectedModel : selectedModel.substring(0, 20) + '...');
 }
 
 function loadIcons() {
