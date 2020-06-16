@@ -329,8 +329,7 @@ $(function() {
       $('#endpoint-menu').append($('<li>')
         .append($('<a>', {
           text: model,
-          onClick: handleModelSelect
-        }))
+        }).click(handleModelSelect))
       );
     });
     loadIcons();
